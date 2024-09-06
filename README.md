@@ -16,11 +16,22 @@ Este é um projeto simples de aplicação web que permite realizar buscas a part
 - **CSS**: Estilos simples para a interface do usuário.
 - **JavaScript**: Lógica para captura de eventos e acionamento da função de busca, além do direcionamento dos anúncios.
 
+## Ensinado na imersão
+- Pagina HTML e CSS.
+- Como criar o sistema de busca e alimentação dos dados em javaScript.
+
+## Atualização Feitas no Projeto
+- Atualizaçãos de layout e background.
+- Adicionei um menu de navegação a página web com links para inicio, github, linkedin e portfolio.
+- Adicionei no HTML um campo para exibir a propaganda abaixo do botão pesquisar.
+- Criei um algoritmo em javaScript que direciona a propaganda sobre a linguagem mais pesquisada.
+
 ## Estrutura de Arquivos
 
 ```bash
 ├── index.html       # Página principal
 ├── style.css        # Estilos da aplicação
+├── dados.js         # Dados javaScript  
 └── app.js           # Lógica JavaScript
 ```
 ![Texto Alternativo](img/site.png)
@@ -30,5 +41,3 @@ Este projeto foi desenvolvido graças à imersão oferecida pela Alura e Google,
 
 ## Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request com sugestões e melhorias.
-
-Link para este Site: https://projeto-assistente-busca-google-alura.vercel.app/
