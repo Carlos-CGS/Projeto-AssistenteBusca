@@ -8,7 +8,7 @@ Este é um projeto simples de aplicação web que permite realizar buscas a part
 - Botão de "Pesquisar" para acionar a busca.
 - Acionamento da busca pressionando a tecla "Enter".
 - Direcionamento de propaganda, através da quantidade de vezes que se busca pelo nome da linguagem.
-- Integração com APIs ou serviços de busca (em construção).
+- Exibição de um avatar representativo para cada linguagem ou tecnologia pesquisada.
 
 ## Tecnologias Utilizadas
 
@@ -25,6 +25,17 @@ Este é um projeto simples de aplicação web que permite realizar buscas a part
 - Adicionei um menu de navegação a página web com links para inicio, github, linkedin e portfolio.
 - Adicionei no HTML um campo para exibir a propaganda abaixo do botão pesquisar.
 - Criei um algoritmo em javaScript que direciona a propaganda sobre a linguagem mais pesquisada.
+- Adição de avatares representativos para cada linguagem ou tecnologia no banco de dados.
+- O campo onde é digitado a pesquisa se apaga quando clicado o botão pesquisar.
+
+
+## Banco de Dados
+As seguintes linguagens e tecnologias estão incluídas no banco de dados do projeto para pesquisa:
+
+| JavaScript | Python    | Java      | C#        | HTML       | CSS       | Kotlin    | R         | C++        | Assembly  |
+|------------|-----------|-----------|-----------|------------|-----------|-----------|-----------|------------|-----------|
+| C          | PHP       | Go        | Swift     | TypeScript | Ruby      | Scala     | Dart      | Rust       | Perl      |
+| GitHub     | Docker    | JSON      | YAML      | SQL        | Linux     | Windows   |           |            |           |
 
 ## Estrutura de Arquivos
 
@@ -34,6 +45,7 @@ Este é um projeto simples de aplicação web que permite realizar buscas a part
 ├── dados.js         # Dados javaScript  
 └── app.js           # Lógica JavaScript
 ```
+
 ![Texto Alternativo](img/site.png)
 
 ## Agradecimentos
