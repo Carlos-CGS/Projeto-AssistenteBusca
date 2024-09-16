@@ -19,7 +19,14 @@ let contadorLinguagens = {
     scala: 0,
     dart: 0,
     rust: 0,
-    perl: 0
+    perl: 0,
+    github: 0,
+    docker: 0,
+    json: 0,
+    yaml: 0,
+    sql: 0,
+    linux: 0,
+    windows: 0,
 };
 
 // Função que retorna a linguagem com mais pesquisas
@@ -45,22 +52,35 @@ function pesquisar() {
     let resultados = "";
     let adBanner = document.querySelector('.ad-banner'); // Seleciona o banner de propaganda
 
+    // Verifica se o campo de pesquisa não está vazio
+    if (!input) {
+        resultados = `
+            <div class="item-resultado">
+                <div class="texto-resultado"><h2>Você não inseriu nenhuma informação.</h2></div>
+            </div>
+        `;
+        section.innerHTML = resultados;
+        return;
+    }
+
+    // Varre todas as linguagens e compara com o input
     for (let linguagem of linguagens) {
         let titulo = linguagem.titulo.toLowerCase();
-        let descricao = linguagem.descricao.toLowerCase();
 
-        if (titulo.includes(input) || descricao.includes(input)) {
+        if (titulo === input) {
             resultados += `
-            <div class="item-resultado">
-                <img src="img/${linguagem.imagem}">
-                <div class="texto-resultado"><h2>${linguagem.titulo}</h2>
-                <p class="descricao-meta">${linguagem.descricao}</p>
-                <p class="descricao-meta"><br> Exemplo de Código:</p><code>${linguagem.exemplo}</code>
-                <p class="descricao-meta"><br># Paradigma: ${linguagem.paradigma}</p>
-                <p class="descricao-meta"># Criação: ${linguagem.criadoEm}</p>
-                <p class="descricao-meta">${linguagem.curiosidade}</p>
-                <a href="${linguagem.link}" target="_blank">Link para Documentação ${linguagem.titulo}</a>
-            </div>
+                <div class="item-resultado">
+                    <img src="img/${linguagem.avatar}" alt="${linguagem.titulo}">
+                    <div class="texto-resultado">
+                        <h2>${linguagem.titulo}</h2>
+                        <p class="descricao-meta">${linguagem.descricao}</p>
+                        <p class="descricao-meta"><br> Exemplo de Código:</p><code>${linguagem.exemplo}</code>
+                        <p class="descricao-meta"><br># Paradigma: ${linguagem.paradigma}</p>
+                        <p class="descricao-meta"># Criação: ${linguagem.criadoEm}</p>
+                        <p class="descricao-meta">${linguagem.curiosidade}</p>
+                        <a href="${linguagem.link}" target="_blank">Link para Documentação ${linguagem.titulo}</a>
+                    </div>
+                </div>
             `;
 
             // Incrementa o contador da linguagem pesquisada
@@ -68,26 +88,20 @@ function pesquisar() {
                 contadorLinguagens[titulo]++;
             }
         }
+    }
 
-        if (!input) {
-            resultados = `
-                <div class="item-resultado">
-                    <div class="texto-resultado"><h2>Você não inseriu nenhuma informação.</h2>
-                </div>
-            `;
-        }
-
-        if (!resultados) {
-            resultados = `
-                <div class="item-resultado">
-                    <div class="texto-resultado"><h2>Linguagem não encontrada!</h2>
-                </div>
-            `;
-        }
+    // Se não encontrou resultados
+    if (!resultados) {
+        resultados = `
+            <div class="item-resultado">
+                <div class="texto-resultado"><h2>Linguagem não encontrada!</h2></div>
+            </div>
+        `;
     }
 
     // Exibe a linguagem com mais pesquisas
     const linguagemComMaisPesquisas = linguagemMaisPesquisada();
+
     switch (linguagemComMaisPesquisas) {
         case 'javascript':
             adBanner.innerHTML = `
@@ -229,6 +243,55 @@ function pesquisar() {
                     <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
             `;
             break;
+        case 'github':
+            adBanner.innerHTML = `
+                <img src="img/github.png" alt="GitHub" class="ad-image">
+                    <p>Explore projetos no GitHub e colabore! Com % Off!</p>
+                    <a href="https://github.com/" target="_blank">GitHub</a>
+                `;
+            break;
+        case 'docker':
+            adBanner.innerHTML = `
+                <img src="img/docker.png" alt="Docker" class="ad-image">
+                    <p>Aprenda a Gerenciar containers com Docker! Com 50% Off!</p>
+                    <a href="https://www.docker.com/" target="_blank">Site Docker</a>
+                `;
+            break;
+        case 'json':
+            adBanner.innerHTML = `
+                <img src="img/json.png" alt="JSON" class="ad-image">
+                    <p>Aprenda e Entenda e use JSON para dados! Com 50% Off!</p>
+                    <a href="https://www.json.org/" target="_blank">Site JSON</a>
+                `;
+            break;
+        case 'yaml':
+            adBanner.innerHTML = `
+                <img src="img/yaml.png" alt="YAML" class="ad-image">
+                    <p>Aprenda a Trabalhar com YAML para configuração! Com 50% Off!</p>
+                    <a href="https://yaml.org/" target="_blank">Site YAML</a>
+                `;
+            break;
+        case 'sql':
+            adBanner.innerHTML = `
+                <img src="img/sql.png" alt="SQL" class="ad-image">
+                    <p>Domine SQL para gerenciamento de dados! Com 50% Off!</p>
+                    <a href="https://www.sql.org/" target="_blank">Site SQL</a>
+                `;
+            break;
+        case 'linux':
+            adBanner.innerHTML = `
+                <img src="img/linux.png" alt="Linux" class="ad-image">
+                    <p>Aprenda Linux e torne-se um pro! Com 50% Off!</p>
+                    <a href="https://www.linux.org/" target="_blank">Site Linux</a>
+                `;
+            break;
+        case 'windows':
+            adBanner.innerHTML = `
+                <img src="img/windows.png" alt="Windows" class="ad-image">
+                    <p>Explore e aproveite Windows ao máximo! com 50% off!</p>
+                    <a href="https://www.microsoft.com/windows" target="_blank">Site Windows</a>
+                `;
+            break;
         default:
             adBanner.innerHTML = `
                 <img src="img/geral.png" alt="Propaganda Geral" class="ad-image">
@@ -236,11 +299,13 @@ function pesquisar() {
                     <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
             `;
             break;
+
     }
 
     section.innerHTML = resultados;
 }
 
+// Função para configurar o banner padrão
 function configurarBannerPadrao() {
     let adBanner = document.querySelector('.ad-banner');
     adBanner.innerHTML = `
@@ -250,13 +315,16 @@ function configurarBannerPadrao() {
     `;
 }
 
+// Configura o banner padrão ao carregar a página
 window.onload = function () {
     configurarBannerPadrao();
 };
 
 // Adiciona o evento de tecla "Enter" para realizar a pesquisa
-document.querySelector('input').addEventListener('keydown', function (event) {
+document.getElementById('pesquisa').addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
-        pesquisar(); // Chama a função pesquisar
+        pesquisar();
+        event.preventDefault(); // Evita comportamento padrão, como a submissão de um formulário
     }
 });
+

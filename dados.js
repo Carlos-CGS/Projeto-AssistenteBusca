@@ -9,6 +9,7 @@ const linguagens = [
         paradigma: "Multi-paradigma",
         criadoEm: 1991,
         imagem: "python.png",
+        avatar: "avatarPython.jpeg",
     },
     {
         titulo: "C#",
@@ -19,6 +20,7 @@ const linguagens = [
         paradigma: "Orientada a objetos",
         criadoEm: 2000,
         imagem: "csharp.png",
+        avatar: "avatarCsharp.jpeg",
     },
     {
         titulo: "HTML",
@@ -28,7 +30,8 @@ const linguagens = [
         link: "https://developer.mozilla.org/pt-BR/docs/Web/HTML",
         paradigma: "Declarativa",
         criadoEm: 1993,
-        imagem: "html.png"
+        imagem: "html.png",
+        avatar: "avatarHtml.jpeg",
     },
     {
         titulo: "CSS",
@@ -38,7 +41,8 @@ const linguagens = [
         link: "https://developer.mozilla.org/pt-BR/docs/Web/CSS",
         paradigma: "Declarativa",
         criadoEm: 1996,
-        imagem: "css.png"
+        imagem: "css.png",
+        avatar: "avatarCss.jpeg",
     },
     {
         titulo: "JavaScript",
@@ -48,7 +52,8 @@ const linguagens = [
         link: "https://developer.mozilla.org/pt-BR/",
         paradigma: "Multi-paradigma",
         criadoEm: 1995,
-        imagem: "javascript.png"
+        imagem: "javascript.png",
+        avatar: "avatarJavaScript.jpeg",
     },
     {
         titulo: "Java",
@@ -58,7 +63,8 @@ const linguagens = [
         link: "https://docs.oracle.com/en/java/",
         paradigma: "Orientada a objetos",
         criadoEm: 1995,
-        imagem: "java.png"
+        imagem: "java.png",
+        avatar: "avatarJava.jpeg",
     },
     {
         titulo: "Kotlin",
@@ -68,7 +74,8 @@ const linguagens = [
         link: "https://kotlinlang.org/",
         paradigma: "Multi-paradigma",
         criadoEm: 2011,
-        imagem: "kotlin.png"
+        imagem: "kotlin.png",
+        avatar: "avatarKotlin.jpeg",
     },
     {
         titulo: "R",
@@ -78,7 +85,8 @@ const linguagens = [
         link: "https://www.r-project.org/",
         paradigma: "Funcional",
         criadoEm: 1993,
-        imagem: "r.png"
+        imagem: "r.png",
+        avatar: "avatarR.jpeg",
     },
     {
         titulo: "C++",
@@ -88,7 +96,8 @@ const linguagens = [
         link: "https://isocpp.org/",
         paradigma: "Multi-paradigma",
         criadoEm: 1979,
-        imagem: "c++.png"
+        imagem: "c++.png",
+        avatar: "avatarC++.jpeg",
     },
     {
         titulo: "Assembly",
@@ -98,7 +107,8 @@ const linguagens = [
         link: "https://en.wikipedia.org/wiki/Assembly_language",
         paradigma: "Imperativo",
         criadoEm: 1940,
-        imagem: "assembly.png"
+        imagem: "assembly.png",
+        avatar: "avatarAssembly.jpeg",
     },
     {
         titulo: "C",
@@ -108,7 +118,8 @@ const linguagens = [
         link: "https://en.wikipedia.org/wiki/C_(programming_language)",
         paradigma: "Imperativo",
         criadoEm: 1972,
-        imagem: "c.png"
+        imagem: "c.png",
+        avatar: "avatarC.jpeg",
     },
     {
         titulo: "PHP",
@@ -118,7 +129,8 @@ const linguagens = [
         link: "https://www.php.net/manual/pt_BR/",
         paradigma: "Multi-paradigma",
         criadoEm: 1994,
-        imagem: "php.png"
+        imagem: "php.png",
+        avatar: "avatarPhp.jpeg",
     },
     {
         titulo: "Go",
@@ -128,7 +140,8 @@ const linguagens = [
         link: "https://go.dev/",
         paradigma: "Imperativo",
         criadoEm: 2009,
-        imagem: "go.png"
+        imagem: "go.png",
+        avatar: "avatarGo.jpeg",
     },
     {
         titulo: "Swift",
@@ -138,7 +151,8 @@ const linguagens = [
         link: "https://developer.apple.com/swift/",
         paradigma: "Multi-paradigma",
         criadoEm: 2014,
-        imagem: "swift.png"
+        imagem: "swift.png",
+        avatar: "avatarSwift.jpeg",
     },
     {
         titulo: "TypeScript",
@@ -148,7 +162,8 @@ const linguagens = [
         link: "https://www.typescriptlang.org/",
         paradigma: "Orientada a objetos",
         criadoEm: 2012,
-        imagem: "typescript.png"
+        imagem: "typescript.png",
+        avatar: "avatarTypeScript.jpeg",
     },
     {
         titulo: "Ruby",
@@ -158,7 +173,8 @@ const linguagens = [
         link: "https://www.ruby-lang.org/en/",
         paradigma: "Multi-paradigma",
         criadoEm: 1995,
-        imagem: "ruby.png"
+        imagem: "ruby.png",
+        avatar: "avatarRuby.jpeg",
     },
     {
         titulo: "Scala",
@@ -168,7 +184,8 @@ const linguagens = [
         link: "https://scala-lang.org/",
         paradigma: "Funcional",
         criadoEm: 2003,
-        imagem: "scala.png"
+        imagem: "scala.png",
+        avatar: "avatarScala.jpeg",
     },
     {
         titulo: "Dart",
@@ -178,7 +195,8 @@ const linguagens = [
         link: "https://dart.dev/",
         paradigma: "Orientada a objetos",
         criadoEm: 2011,
-        imagem: "dart.png"
+        imagem: "dart.png",
+        avatar: "avatarDart.jpeg",
     },
     {
         titulo: "Rust",
@@ -188,7 +206,8 @@ const linguagens = [
         link: "https://www.rust-lang.org/",
         paradigma: "Multi-paradigma",
         criadoEm: 2010,
-        imagem: "rust.png"
+        imagem: "rust.png",
+        avatar: "avatarRust.jpeg",
     },
     {
         titulo: "Perl",
@@ -198,6 +217,84 @@ const linguagens = [
         link: "https://www.perl.org/",
         paradigma: "Multi-paradigma",
         criadoEm: 1987,
-        imagem: "perl.png"
-    }
+        imagem: "perl.png",
+        avatar: "avatarPerl.jpeg",
+    },
+    {
+        titulo: "GitHub",
+        descricao: "Plataforma de hospedagem de código-fonte com controle de versão usando Git. Amplamente utilizado para colaboração em projetos de software.",
+        curiosidade: "GitHub foi fundado em 2008 e é uma das maiores plataformas de desenvolvimento colaborativo do mundo.",
+        exemplo: "git init\ngit add .\ngit commit -m 'Primeiro commit'\ngit push origin main",
+        link: "https://github.com/",
+        paradigma: "Controle de Versão",
+        criadoEm: 2008,
+        imagem: "github.png",
+        avatar: "avatarGitHub.jpeg",
+    },
+    {
+        titulo: "Docker",
+        descricao: "Plataforma para automação de aplicativos em contêineres, facilitando o desenvolvimento, a entrega e a execução de aplicativos em ambientes isolados e portáteis.",
+        curiosidade: "Docker foi lançado em 2013 e revolucionou a forma como os aplicativos são implantados e gerenciados.",
+        exemplo: "docker run -d -p 80:80 nginx",
+        link: "https://www.docker.com/",
+        paradigma: "Contêineres",
+        criadoEm: 2013,
+        imagem: "docker.png",
+        avatar: "avatarDocker.jpeg",
+    },
+    {
+        titulo: "JSON",
+        descricao: "Formato leve de troca de dados, fácil de ler e escrever para humanos e fácil de analisar e gerar para máquinas.",
+        curiosidade: "JSON é um acrônimo para JavaScript Object Notation. É amplamente usado para transmitir dados entre servidores e aplicações web.",
+        exemplo: "{ \"nome\": \"Carlos\", \"idade\": 30 }",
+        link: "https://www.json.org/",
+        paradigma: "Formato de Dados",
+        criadoEm: 2001,
+        imagem: "json.png",
+        avatar: "avatarJson.jpeg"
+    },
+    {
+        titulo: "YAML",
+        descricao: "Formato de serialização de dados legível por humanos, muitas vezes usado para arquivos de configuração.",
+        curiosidade: "YAML é um acrônimo recursivo que significa 'YAML Ain't Markup Language'.",
+        exemplo: "nome: Carlos\nidade: 30",
+        link: "https://yaml.org/",
+        paradigma: "Formato de Dados",
+        criadoEm: 2001,
+        imagem: "yaml.png",
+        avatar: "avatarYaml.jpeg"
+    },
+    {
+        titulo: "SQL",
+        descricao: "Linguagem de consulta estruturada usada para gerenciar e manipular bancos de dados relacionais.",
+        curiosidade: "SQL é usado para realizar operações como consultas, inserções, atualizações e exclusões em bancos de dados relacionais.",
+        exemplo: "SELECT * FROM usuarios WHERE idade > 25;",
+        link: "https://www.sql.org/",
+        paradigma: "Linguagem de Consulta",
+        criadoEm: 1974,
+        imagem: "sql.png",
+        avatar: "avatarSql.jpeg"
+    },
+    {
+        titulo: "Linux",
+        descricao: "Sistema operacional de código aberto, amplamente utilizado em servidores e sistemas embarcados.",
+        curiosidade: "Linux é conhecido por sua estabilidade e segurança. É o núcleo de muitos sistemas operacionais, como Ubuntu e Fedora.",
+        exemplo: "sudo apt-get update",
+        link: "https://www.linux.org/",
+        paradigma: "Sistema Operacional",
+        criadoEm: 1991,
+        imagem: "linux.png",
+        avatar: "avatarLinux.jpeg"
+    },
+    {
+        titulo: "Windows",
+        descricao: "Sistema operacional desenvolvido pela Microsoft, amplamente utilizado em desktops e laptops.",
+        curiosidade: "O Windows é conhecido por sua interface gráfica intuitiva e ampla compatibilidade com software comercial.",
+        exemplo: "dir",
+        link: "https://www.microsoft.com/windows",
+        paradigma: "Sistema Operacional",
+        criadoEm: 1985,
+        imagem: "windows.png",
+        avatar: "avatarWindows.jpeg"
+    },
 ];

@@ -18,21 +18,26 @@
                 <li><a href="https://carlos-cgs.github.io/CGS/">PORTFÓLIO</a></li>
             </ul>
         </nav>
-        <h1>Sobre qual Linguagem Deseja Conhecer?</h1>
+        <h1>Sobre qual Tecnologia Deseja Conhecer?</h1>
+        <section class="container-pesquisa">
+            <input type="text" id="pesquisa" placeholder="Digite o que deseja pesquisar...">
+            <button onclick="pesquisar()">Pesquisar</button>
+        </section>
     </header>
     <main>
-        <section class="container-pesquisa">
-            <input type="text" id="pesquisa" placeholder="Digite o nome da linguagem">
-            <button onclick="pesquisar()">Pesquisar</button>
-            <!-- Seção da propaganda -->
-            <div class="ad-banner">
-                <a href="https://www.exemplo.com">
-                    <img src="propaganda.jpg" alt="Propaganda">
-                </a>
-            </div>
-        </section>
-        <section class="resultados-pesquisa" id="resultados-pesquisa">
-        </section>
+        <div class="container-main">
+            <section class="propaganda">
+                <div class="ad-banner">
+                    <a href="https://www.exemplo.com">
+                        <img src="propaganda.jpg" alt="Propaganda">
+                    </a>
+                </div>
+            </section>
+            <section class="card">
+                <section class="container-pesquisa"></section>
+                <section class="resultados-pesquisa" id="resultados-pesquisa"></section>
+            </section>
+        </div>
     </main>
     <footer>
         <p>2024 - Carlos-CGS - Todos os direitos reservados</p>

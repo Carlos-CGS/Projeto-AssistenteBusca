@@ -5,7 +5,7 @@
 body {
     font-family: "Chakra Petch", sans-serif;
     /* Define a fonte padrão */
-    background-image: url('background.jpg');
+    background-image: url('img/background.jpg');
     /* Define imagem como plano de fundo */
     background-size: cover;
     /* Preenche o fundo */
@@ -21,14 +21,10 @@ body {
     /* Centraliza os itens horizontalmente */
     justify-content: center;
     /* Centraliza os itens verticalmente */
-    height: 125vh;
+    height: 135vh;
     /* Preenche a altura total da viewport */
     margin: 0;
     padding: 0;
-}
-
-header {
-    margin-top: 5rem;
 }
 
 /* Estilizando o menu */
@@ -36,13 +32,12 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    /* Centraliza os itens horizontalmente */
     padding: 0;
     margin: 0;
 }
 
 nav li {
-    margin: 1rem 2rem;
+    margin: 0rem 2rem;
 }
 
 nav a {
@@ -50,108 +45,114 @@ nav a {
     color: white;
     text-decoration: none;
     transition: all 0.3s ease;
-    /* Adiciona transição para o efeito */
 }
 
 nav a:hover {
     color: #007bff;
-    /* Cor azul */
     text-decoration: underline;
     text-shadow: 0 0 10px #007bff;
-    /* Cria o efeito de brilho */
 }
 
 /* Estiliza os títulos h1 */
 h1 {
     font-size: 2.5rem;
-    /* Tamanho da fonte */
     color: #fdfdfd;
-    /* Cor do texto */
     text-align: center;
-    /* Alinha o texto ao centro */
     letter-spacing: 0.4rem;
-    /* Espaçamento entre letras */
 }
 
 /* Estiliza as seções da página */
 section {
     display: flex;
-    /* Usa Flexbox para layout */
     flex-direction: column;
-    /* Alinha os itens na vertical */
     align-items: center;
-    /* Centraliza os itens horizontalmente */
-    margin-bottom: 3rem;
-    /* Espaçamento abaixo de cada seção */
+    margin-bottom: 0rem;
+}
+
+.container-main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0rem;
+    width: 100%;
+    max-width: 100vw;
+    padding: 0rem 8rem;
+    box-sizing: border-box;
+}
+
+.propaganda {
+    flex: 1;
+    max-width: 20%;
+}
+
+.card {
+    flex: 2;
+    max-width: 70%;
 }
 
 .container-pesquisa {
     display: flex;
     align-items: center;
-    /* Alinha os itens verticalmente */
     justify-content: space-between;
-    /* Distribui o espaço de forma equilibrada */
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .container-pesquisa input {
     width: 25rem;
-    /* Ajusta a largura do campo de pesquisa */
     padding: 0.8rem;
-    /* Ajusta o padding */
     border-radius: 1.5rem;
     margin-right: 1rem;
-    /* Adiciona espaçamento à direita */
+    margin-bottom: 0.2rem;
 }
 
 .container-pesquisa button {
     padding: 0.8rem 1.2rem;
-    /* Espaçamento interno do botão */
     border-radius: 1.5rem;
     background-color: #30475E;
     color: #F5F7F8;
     font-size: 1rem;
     cursor: pointer;
-    margin-right: 1rem;
-    /* Espaçamento entre o botão e a propaganda */
 }
 
+/* Estilo para a propaganda */
 .ad-banner {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color: #f4f4f4;
-    padding: 10px;
-    margin: 20px 0;
+    background: #ebe6e6d0;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 60%;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 30%;
 }
 
-/* Estiliza a imagem da propaganda */
 .ad-banner img {
-    max-width: 30px;
-    /* Define um tamanho máximo para a imagem */
+    max-width: 100px;
     height: auto;
+    margin-bottom: 15px;
     border-radius: 10%;
-    /* Deixa a imagem circular, se necessário */
-    margin-right: 20px;
 }
 
-/* Estiliza o texto dentro do banner de propaganda */
 .ad-banner .ad-text {
-    flex: 1;
-    /* Faz com que o texto ocupe o espaço restante */
     font-size: 1rem;
     color: #333;
-    text-align: left;
+    margin-bottom: 0.3rem;
+}
+
+.ad-banner a {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
     width: 60rem;
-    height: 50vh;
+    height: 75vh;
     margin-top: -2rem;
     margin-bottom: 5rem;
     padding: 1rem;
@@ -168,70 +169,52 @@ section {
     border-radius: 0.6rem;
     padding: 1rem;
     margin: 0 1rem;
-    max-width: 80%;
-    margin-bottom: 1rem;
+    max-width: 100%;
+    margin: 3rem 1rem;
+
 }
 
 .item-resultado img {
     float: left;
     margin-right: 1rem;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-.item-resultado p {
-    margin: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 10%;
 }
 
 
 /* Estiliza os títulos dentro dos itens de resultado */
 .item-resultado h2 {
     font-size: 1.5rem;
-    /* Tamanho da fonte */
     color: #222831;
-    /* Cor do texto */
 }
 
 /* Estiliza os links dentro dos itens de resultado */
 .item-resultado a {
     text-decoration: none;
-    /* Remove o sublinhado padrão dos links */
     color: #30475E;
-    /* Cor do texto dos links */
 }
 
 /* Estiliza os links quando são passados o mouse sobre */
 .item-resultado a:hover {
     text-decoration: underline;
-    /* Adiciona sublinhado ao passar o mouse */
 }
 
 /* Estiliza a descrição meta dentro dos itens de resultado */
 .descricao-meta {
     color: #45474B;
-    /* Cor do texto */
     margin: 0.5rem 0;
-    /* Margem acima e abaixo */
 }
 
 /* Estiliza o rodapé da página */
 footer {
     background-color: #302999;
-    /* Cor de fundo do rodapé */
     color: #ffffff;
-    /* Cor do texto */
     text-align: center;
-    /* Alinha o texto ao centro */
     padding: 0.1rem 0;
-    /* Espaçamento interno */
     width: 100%;
-    /* Largura total da página */
     position: absolute;
-    /* Posiciona o rodapé */
     bottom: 0rem;
-    /* Alinha ao fundo da página */
     font-size: 1rem;
-    /* Tamanho da fonte */
-    margin-bottom: -13rem;
+    margin-bottom: -15rem;
 }
