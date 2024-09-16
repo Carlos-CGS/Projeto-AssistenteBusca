@@ -87,6 +87,8 @@ function pesquisar() {
             if (contadorLinguagens[titulo] !== undefined) {
                 contadorLinguagens[titulo]++;
             }
+
+            limparCampo();
         }
     }
 
@@ -97,6 +99,11 @@ function pesquisar() {
                 <div class="texto-resultado"><h2>Linguagem não encontrada!</h2></div>
             </div>
         `;
+    }
+
+    function limparCampo() {
+        valorPesquisa = document.querySelector('input');
+        valorPesquisa.value = '';
     }
 
     // Exibe a linguagem com mais pesquisas
