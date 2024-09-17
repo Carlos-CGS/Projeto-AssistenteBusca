@@ -1,6 +1,7 @@
-# Projeto - Assistente de Busca - Imersão Alura X Google
+# Projeto - Buscas AvatarTech - Imersão Alura X Google
 
-Este é um projeto simples de aplicação web que permite realizar buscas a partir de um campo de input. A funcionalidade de busca pode ser acionada tanto pelo clique no botão "Pesquisar" quanto pressionando a tecla "Enter". A propaganda é direcionada de acordo com as buscas efetuadas no buscado, sempre apresentando a propaganda da linguagem mais pesquisada.
+O Assistente de Busca é uma aplicação web que faz buscas em um banco de dados java script e retorna um avatar com as características da linguagem , assim como, uma breve descrição.
+O projeto possui um direcionamento de propaganda a qual é encviada a propaganda com a linguagem mais pesquisada, responsividade para telas menores e foi criado após a Imersão Alura X Google.
 
 ## Funcionalidades
 
