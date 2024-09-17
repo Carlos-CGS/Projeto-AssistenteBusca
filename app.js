@@ -60,6 +60,7 @@ function pesquisar() {
             </div>
         `;
         section.innerHTML = resultados;
+        limparCampo();
         return;
     }
 
@@ -99,6 +100,7 @@ function pesquisar() {
                 <div class="texto-resultado"><h2>Linguagem não encontrada!</h2></div>
             </div>
         `;
+        limparCampo();
     }
 
     function limparCampo() {
