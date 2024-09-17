@@ -4,25 +4,15 @@
 /* Estiliza o corpo da página */
 body {
     font-family: "Chakra Petch", sans-serif;
-    /* Define a fonte padrão */
     background-image: url('img/background.jpg');
-    /* Define imagem como plano de fundo */
     background-size: cover;
-    /* Preenche o fundo */
     background-repeat: no-repeat;
-    /* Evita repetição */
     background-position: center;
-    /* Centraliza a imagem */
     display: flex;
-    /* Usa Flexbox para layout */
     flex-direction: column;
-    /* Alinha os itens na vertical */
     align-items: center;
-    /* Centraliza os itens horizontalmente */
     justify-content: center;
-    /* Centraliza os itens verticalmente */
-    height: 135vh;
-    /* Preenche a altura total da viewport */
+    min-height: 100vh;
     margin: 0;
     padding: 0;
 }
@@ -33,7 +23,7 @@ nav ul {
     display: flex;
     justify-content: center;
     padding: 0;
-    margin: 0;
+    margin: 5% 0 0 0;
 }
 
 nav li {
@@ -153,7 +143,7 @@ section {
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
     width: 60rem;
-    height: 75vh;
+    height: 80vh;
     margin-top: -2rem;
     margin-bottom: 5rem;
     padding: 1rem;
@@ -161,7 +151,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 /* Estiliza cada item de resultado */
@@ -212,10 +202,103 @@ footer {
     background-color: #302999;
     color: #ffffff;
     text-align: center;
-    padding: 0.1rem 0;
     width: 100%;
-    position: absolute;
-    bottom: 0rem;
+    bottom: 0;
     font-size: 1rem;
-    margin-bottom: -15rem;
+    position: relative;
+}
+
+/* Define estilos para telas menores que 768px (telas de dispositivos móveis) */
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 100vh;
+        background-image: url('img/background.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+
+    nav ul {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    nav li {
+        margin: 0.5rem 5%;
+    }
+
+    .container-pesquisa {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .container-pesquisa input {
+        width: 80%;
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+
+    .container-pesquisa button {
+        width: 70%;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .container-main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .card {
+        flex: 0 0 90%;
+        width: 90%;
+        max-width: 95%;
+        margin-bottom: 1%;
+    }
+
+    .propaganda {
+        flex: 0 0 20%;
+        width: 50%;
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .resultados-pesquisa {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .item-resultado {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .item-resultado img {
+        width: 100%;
+        height: auto;
+    }
+
+    footer {
+        position: relative;
+        width: 100%;
+        padding: 1rem 0;
+        bottom: 0;
+    }
 }
