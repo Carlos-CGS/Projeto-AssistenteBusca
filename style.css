@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 /* Estiliza o corpo da página */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Chakra Petch", sans-serif;
     background-image: url('img/background.jpg');
@@ -12,10 +16,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    max-height: 100vh;
     margin: 0;
     padding: 0;
-}
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+} 
 
 /* Estilizando o menu */
 nav ul {
@@ -45,13 +52,29 @@ nav a:hover {
 
 /* Estiliza os títulos h1 */
 h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: #fdfdfd;
     text-align: center;
     letter-spacing: 0.4rem;
 }
 
 /* Estiliza as seções da página */
+header {
+    width: 100vw;
+    height: 10vh;
+    margin-top: -3rem;
+    z-index: 2;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    flex: 1;
+    pointer-events: auto;
+    margin-top: -1rem;
+    box-sizing: border-box;
+}
+
 section {
     display: flex;
     flex-direction: column;
@@ -67,42 +90,89 @@ section {
     max-width: 100vw;
     padding: 0rem 8rem;
     box-sizing: border-box;
+    gap: 1rem;
+    margin: 1rem;
+    height: 100vh;
 }
 
 .propaganda {
     flex: 1;
     max-width: 20%;
+    margin-top: 10%;
 }
 
 .card {
-    flex: 2;
-    max-width: 70%;
+    flex: 1;
+    width: 70%;
+    height: 26rem;
+    background-color: #ebe6e6d0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    margin-top: 15%;
+    gap: -2rem;
+    display: none;
 }
 
 .container-pesquisa {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 1rem;
 }
 
 .container-pesquisa input {
     width: 25rem;
-    padding: 0.8rem;
+    height: 2rem;
+    padding: 0.5rem;
     border-radius: 1.5rem;
     margin-right: 1rem;
     margin-bottom: 0.2rem;
 }
 
 .container-pesquisa button {
-    padding: 0.8rem 1.2rem;
+    padding: 0.5rem 1rem;
     border-radius: 1.5rem;
     background-color: #30475E;
     color: #F5F7F8;
-    font-size: 1rem;
+    font-size: 0.8rem;
     cursor: pointer;
     margin-bottom: 0.2rem;
 }
+
+/* Estiliza a caixa de resultados da pesquisa */
+.resultados-pesquisa {
+    width: 215vw;
+    height: 120vh;
+    padding: 0;
+    margin: 0;
+    border-radius: 0.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-y: hidden;
+}
+
+/* Estiliza cada item de resultado */
+.item-resultado {
+    background: #ebe6e6d0;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    margin: 1rem; 
+    max-width: calc(30% - 1rem); 
+    flex: 1 1 calc(30% - 1rem); 
+}
+
+.item-resultado img {
+    float: left;
+    margin-right: 1rem;
+    padding: 0.1rem;
+    width: 45%;
+    height: 55vh;
+    border-radius: 10%;
+}
+
 
 /* Estilo para a propaganda */
 .ad-banner {
@@ -117,6 +187,7 @@ section {
     box-sizing: border-box;
     text-align: center;
     margin-top: 30%;
+    z-index: 2;
 }
 
 .ad-banner img {
@@ -138,41 +209,6 @@ section {
     text-decoration: none;
     transition: color 0.3s ease;
 }
-
-
-/* Estiliza a caixa de resultados da pesquisa */
-.resultados-pesquisa {
-    width: 60rem;
-    height: 80vh;
-    margin-top: -2rem;
-    margin-bottom: 5rem;
-    padding: 1rem;
-    border-radius: 0.6rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    overflow-y: hidden;
-}
-
-/* Estiliza cada item de resultado */
-.item-resultado {
-    background: #ebe6e6d0;
-    border-radius: 0.6rem;
-    padding: 1rem;
-    margin: 0 1rem;
-    max-width: 100%;
-    margin: 3rem 1rem;
-
-}
-
-.item-resultado img {
-    float: left;
-    margin-right: 1rem;
-    width: 50%;
-    height: 100%;
-    border-radius: 10%;
-}
-
 
 /* Estiliza os títulos dentro dos itens de resultado */
 .item-resultado h2 {
@@ -204,21 +240,21 @@ footer {
     text-align: center;
     width: 100%;
     bottom: 0;
-    font-size: 1rem;
-    position: relative;
+    font-size: 0.6rem;
+    position: absolute;
+    z-index: 1;
 }
 
 /* Define estilos para telas menores que 768px (telas de dispositivos móveis) */
 @media (max-width: 768px) {
+    /* Estilização do Body */
     body {
-        margin: 0;
-        padding: 0;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        min-height: 100vh;
+        max-height: 100vh;
         background-image: url('img/background.jpg');
         background-size: cover;
         background-repeat: no-repeat;
@@ -226,79 +262,106 @@ footer {
         background-attachment: fixed;
     }
 
+    h1 {
+        font-size: 1rem;
+    }
+
+    /* Menu de Navegação */
     nav ul {
         width: 100%;
-        margin-top: 5%;
+        margin-top: 15%;
+        font-size: 0.5rem;
     }
 
     nav li {
-        margin: 0.5rem 5%;
+        margin: 0 1rem;
     }
 
+    /* Campo de Pesquisa */
     .container-pesquisa {
         flex-direction: column;
         width: 100%;
         align-items: center;
+        font-size: 1rem;
     }
 
     .container-pesquisa input {
         width: 80%;
-        padding: 0.5rem;
+        height: 20%;
+        padding: 0.1rem;
         border-radius: 1rem;
+        margin: 0.1rem;
+        margin-top: -0.5rem;
     }
 
     .container-pesquisa button {
-        width: 70%;
-        padding: 0.5rem;
+        width: 50%;
+        padding: 0.2rem;
         border-radius: 1rem;
         margin-top: 0.5rem;
+        margin: 0.1rem;
     }
 
+    /* Conteúdo Principal */
     .container-main {
         display: flex;
         flex-direction: column;
         width: 100%;
         justify-content: center;
         align-items: center;
-        padding: 1rem;
+        padding: 1%;
         box-sizing: border-box;
     }
 
+    /* Estilização dos Cards */
     .card {
-        flex: 0 0 90%;
         width: 90%;
-        max-width: 95%;
-        margin-bottom: 1%;
+        height: 70%;
+        margin-top: 27%;
+        position: absolute;
+        align-items: center;
+        margin-right: 3%;
     }
 
-    .propaganda {
-        flex: 0 0 20%;
-        width: 50%;
-        max-width: 100%;
-        margin-bottom: 2rem;
+    /* Banner de Anúncio (Oculto) */
+    .ad-banner {
+        display: none;
     }
 
+    /* Resultados da Pesquisa */
     .resultados-pesquisa {
-        width: 100%;
-        height: auto;
-        margin: 0;
-        padding: 0.5rem;
+        width: 300vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+        overflow-y: auto
     }
 
+    /* Item de Resultado */
     .item-resultado {
-        width: 100%;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
         margin-bottom: 1rem;
+        text-align: center; 
+        width: 100vw;
+        font-size: 1rem;
     }
 
     .item-resultado img {
-        width: 100%;
-        height: auto;
+        width: 50vw; 
+        height: auto; 
+        max-height: 40vh; 
+        margin: 0;
+        padding: 0;
+        border-radius: 0.5rem; 
     }
 
+    /* Rodapé */
     footer {
         position: relative;
-        width: 100%;
-        padding: 1rem 0;
-        bottom: 0;
+        width: 100vw;
     }
 }
