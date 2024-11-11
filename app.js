@@ -49,16 +49,17 @@ function linguagemMaisPesquisada() {
 function pesquisar() {
     let input = document.getElementById("pesquisa").value.toLowerCase();
     let section = document.getElementById("resultados-pesquisa");
+    const cardContainer = document.querySelector('.card')
+    cardContainer.style.display = 'flex';
     let resultados = "";
     let adBanner = document.querySelector('.ad-banner'); // Seleciona o banner de propaganda
 
     // Verifica se o campo de pesquisa não está vazio
     if (!input) {
-        resultados = `
-            <div class="item-resultado">
+        resultados = 
+            `<div class="item-resultado">
                 <div class="texto-resultado"><h2>Você não inseriu nenhuma informação.</h2></div>
-            </div>
-        `;
+            </div>`;
         section.innerHTML = resultados;
         limparCampo();
         return;
@@ -69,8 +70,8 @@ function pesquisar() {
         let titulo = linguagem.titulo.toLowerCase();
 
         if (titulo === input) {
-            resultados += `
-                <div class="item-resultado">
+            resultados += 
+                `<div class="item-resultado">
                     <img src="img/${linguagem.avatar}" alt="${linguagem.titulo}">
                     <div class="texto-resultado">
                         <h2>${linguagem.titulo}</h2>
@@ -81,8 +82,7 @@ function pesquisar() {
                         <p class="descricao-meta">${linguagem.curiosidade}</p>
                         <a href="${linguagem.link}" target="_blank">Link para Documentação ${linguagem.titulo}</a>
                     </div>
-                </div>
-            `;
+                </div>`;
 
             // Incrementa o contador da linguagem pesquisada
             if (contadorLinguagens[titulo] !== undefined) {
@@ -95,11 +95,10 @@ function pesquisar() {
 
     // Se não encontrou resultados
     if (!resultados) {
-        resultados = `
-            <div class="item-resultado">
+        resultados = 
+            `<div class="item-resultado">
                 <div class="texto-resultado"><h2>Linguagem não encontrada!</h2></div>
-            </div>
-        `;
+            </div>`;
         limparCampo();
     }
 
@@ -301,39 +300,35 @@ function pesquisar() {
                     <a href="https://www.microsoft.com/windows" target="_blank">Site Windows</a>
                 `;
             break;
-        default:
-            adBanner.innerHTML = `
-                <img src="img/geral.png" alt="Propaganda Geral" class="ad-image">
+            default:
+                adBanner.innerHTML = 
+                    `<img src="img/geral.png" alt="Propaganda Geral" class="ad-image">
                     <p>Confira nossas promoções e ferramentas para desenvolvedores!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
-            `;
-            break;
-
+                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>`;
+                break;
+        }
+    
+        section.innerHTML = resultados;
     }
-
-    section.innerHTML = resultados;
-}
-
-// Função para configurar o banner padrão
-function configurarBannerPadrao() {
-    let adBanner = document.querySelector('.ad-banner');
-    adBanner.innerHTML = `
-        <img src="img/geral.png" alt="Propaganda Geral" class="ad-image">
-        <p>Confira nossas promoções e ferramentas para desenvolvedores!</p>
-        <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
-    `;
-}
-
-// Configura o banner padrão ao carregar a página
-window.onload = function () {
-    configurarBannerPadrao();
-};
-
-// Adiciona o evento de tecla "Enter" para realizar a pesquisa
-document.getElementById('pesquisa').addEventListener('keydown', function (event) {
-    if (event.key === 'Enter') {
-        pesquisar();
-        event.preventDefault(); // Evita comportamento padrão, como a submissão de um formulário
+    
+    // Função para configurar o banner padrão
+    function configurarBannerPadrao() {
+        let adBanner = document.querySelector('.ad-banner');
+        adBanner.innerHTML = 
+            `<img src="img/geral.png" alt="Propaganda Geral" class="ad-image">
+            <p>Confira nossas promoções e ferramentas para desenvolvedores!</p>
+            <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>`;
     }
-});
+    
+    // Configura o banner padrão ao carregar a página
+    window.onload = function () {
+        configurarBannerPadrao();
+    };
 
+    // Adiciona o evento de tecla "Enter" para realizar a pesquisa
+    document.getElementById('pesquisa').addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            pesquisar();
+            event.preventDefault(); 
+        }
+    });
