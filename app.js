@@ -1,3 +1,4 @@
+
 // Objeto para armazenar o número de pesquisas por linguagem
 let contadorLinguagens = {
     javascript: 0,
@@ -304,7 +305,7 @@ function pesquisar() {
                 adBanner.innerHTML = 
                     `<img src="img/geral.png" alt="Propaganda Geral" class="ad-image">
                     <p>Confira nossas promoções e ferramentas para desenvolvedores!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>`;
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>`;
                 break;
         }
     
@@ -317,7 +318,7 @@ function pesquisar() {
         adBanner.innerHTML = 
             `<img src="img/geral.png" alt="Propaganda Geral" class="ad-image">
             <p>Confira nossas promoções e ferramentas para desenvolvedores!</p>
-            <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>`;
+            <a href="https://web.dio.me/home" target="_blank">DIO</a>`;
     }
     
     // Configura o banner padrão ao carregar a página
