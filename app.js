@@ -52,7 +52,7 @@ function pesquisar() {
     const cardContainer = document.querySelector('.card')
     cardContainer.style.display = 'flex';
     let resultados = "";
-    let adBanner = document.querySelector('.ad-banner'); // Seleciona o banner de propaganda
+    let adBanner = document.querySelector('.ad-banner'); 
 
     // Verifica se o campo de pesquisa não está vazio
     if (!input) {
@@ -114,141 +114,141 @@ function pesquisar() {
         case 'javascript':
             adBanner.innerHTML = `
                 <img src="img/javascript.png" alt="Propaganda JavaScript" class="ad-image">
-                    <p>Aprenda JavaScript com Google X Alura por 50% Off</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda JavaScript com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'python':
             adBanner.innerHTML = `
                 <img src="img/python.png" alt="Propaganda Python" class="ad-image">
-                    <p>Aprenda Python com Google X Alura por 50% Off</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda Python com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'java':
             adBanner.innerHTML = `
                 <img src="img/java.png" alt="Propaganda Java" class="ad-image">
-                    <p>Aprenda Java com nossa parceria especial!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda Java com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'c#':
             adBanner.innerHTML = `
                 <img src="img/csharp.png" alt="Propaganda C#" class="ad-image">
-                    <p>Aprenda C# com nossa parceria especial!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda C# com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'html':
             adBanner.innerHTML = `
                 <img src="img/html.png" alt="Propaganda HTML" class="ad-image">
-                    <p>Aprenda HTML com nossa parceria especial!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda HTML com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'css':
             adBanner.innerHTML = `
                 <img src="img/css.png" alt="Propaganda CSS" class="ad-image">
-                    <p>Aprenda CSS com nossa parceria especial!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda CSS com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'kotlin':
             adBanner.innerHTML = `
                 <img src="img/kotlin.png" alt="Propaganda Kotlin" class="ad-image">
-                    <p>Aprenda Kotlin com nossa parceria especial!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda Kotlin com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'r':
             adBanner.innerHTML = `
                 <img src="img/r.png" alt="Propaganda R" class="ad-image">
-                    <p>Aprenda R com nossa parceria especial!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda R com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'c++':
             adBanner.innerHTML = `
                 <img src="img/c++.png" alt="Propaganda C++" class="ad-image">
-                    <p>Aprenda C++ com nossa parceria especial!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda C++ com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'assembly':
             adBanner.innerHTML = `
                 <img src="img/assembly.png" alt="Propaganda Assembly" class="ad-image">
-                    <p>Aprenda Assembly com nossa parceria especial!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda Assembly com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'c':
             adBanner.innerHTML = `
                 <img src="img/c.png" alt="Propaganda C" class="ad-image">
-                    <p>Aprenda C com nossa parceria especial!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda C com nossa a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'php':
             adBanner.innerHTML = `
                 <img src="img/php.png" alt="Propaganda PHP" class="ad-image">
-                    <p>Aprenda PHP com nossa parceria especial!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda PHP com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'go':
             adBanner.innerHTML = `
                 <img src="img/go.png" alt="Propaganda Go" class="ad-image">
-                    <p>Aprenda Go com nossa parceria especial!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda Go com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'swift':
             adBanner.innerHTML = `
                 <img src="img/swift.png" alt="Propaganda Swift" class="ad-image">
-                    <p>Aprenda Swift com nossa parceria especial!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda Swift com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'typescript':
             adBanner.innerHTML = `
                 <img src="img/typescript.png" alt="Propaganda TypeScript" class="ad-image">
-                    <p>Aprenda TypeScript com nossa parceria especial!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda TypeScript com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'ruby':
             adBanner.innerHTML = `
                 <img src="img/ruby.png" alt="Propaganda Ruby" class="ad-image">
-                    <p>Aprenda Ruby com nossa parceria especial!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda Ruby com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'scala':
             adBanner.innerHTML = `
                 <img src="img/scala.png" alt="Propaganda Scala" class="ad-image">
-                    <p>Aprenda Scala com nossa parceria especial!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda Scala com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'dart':
             adBanner.innerHTML = `
                 <img src="img/dart.png" alt="Propaganda Dart" class="ad-image">
-                    <p>Aprenda Dart com nossa parceria especial!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda Dart com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'rust':
             adBanner.innerHTML = `
                 <img src="img/rust.png" alt="Propaganda Rust" class="ad-image">
-                    <p>Aprenda Rust com nossa parceria especial!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda Rust com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'perl':
             adBanner.innerHTML = `
                 <img src="img/perl.png" alt="Propaganda Perl" class="ad-image">
-                    <p>Aprenda Perl com nossa parceria especial!</p>
-                    <a href="https://www.alura.com.br/" target="_blank">Site Alura</a>
+                    <p>Aprenda Perl com a DIO por 50% Off</p>
+                    <a href="https://web.dio.me/home" target="_blank">DIO</a>
             `;
             break;
         case 'github':
